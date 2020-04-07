@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Laberinto</title>
+    <!-- <script src="js/keypress.js"></script> -->
+    <!-- <script src="js/juego.js"></script> -->
+    <!-- <script src="js/arreglos.js"></script> -->
+    <script src="js/mazmorra.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Eater&family=Titan+One&display=swap" rel="stylesheet">
+    <style>
+        .contenedor{
+            max-width: 750px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .lienzo {
+            text-align: center;
+        }
+
+        /* The Modal (background) */
+      .modal {
+          display: none; 
+          position: fixed; 
+          z-index: 1; 
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%; 
+          overflow: auto; 
+          background-color: rgb(0,0,0); 
+          background-color: rgba(0,0,0,0.4);
+        }
+        
+        /* Modal Content/Box */
+        .modal-content {
+          background-color: #a5a562;
+          margin: 15% auto; 
+          padding: 20px;
+          border: 5px solid rgb(255, 255, 255);
+          width: 25%; 
+          border-radius: 25px;
+          text-align: center;
+          font-family: 'Eater', sans-serif;
+          font-size: 20px;
+          font-weight: 700;
+          color: rgb(139, 83, 18);
+        }
+        .M-icono i {
+          color: white;
+          font-size: 50px;
+        }
+
+        /* The Close Button */
+        .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        hr {
+          border: 2px solid rgb(82, 55, 30);
+        }
+    </style>
+</head>
+<body onload='inicializa();'>
+<!-- <body> -->
+    <div class="contenedor">
+        <canvas id='canvas' class="lienzo" width='750' height='500' style='border:2px solid #000000;'></canvas>
+    </div>
+
+<!-- The Modal -->
+    <div id="myModal" onchange="meDieron()" class="modal">
+
+      <div class="modal-content">
+        <div class="M-icono">
+          <i class="fa"></i>
+        </div>
+        <hr>
+        <p class="textoModal"></p>
+      </div>
+
+    </div>
+
+</body>
+</html>
