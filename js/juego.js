@@ -22,35 +22,38 @@ function inicializar(){
 // ===============================
 // PROTAGONISTA
 // ===============================
-let protagonista = function(x, y){
+let Protagonista = function(x, y){
     
     this.x = x;
     this.y = y;
     this.velocidad = 3;
+}
 
-    this.dibuja = function(){
-        ctx.drawImage(imgRex, this.x, this.y);
-    }
+Protagonista.prototype.dibuja = function(){
+    ctx.drawImage(imgRex, this.x, this.y);
+}
 
-    this.texto = function(){
-        ctx.font = '30px impact';
-        ctx.fillStyle = '#555555';
-        ctx.fillText('X: ' + this.x, 100,100);
-    }
+Protagonista.prototype.texto = function(){
+    ctx.font = '30px impact';
+    ctx.fillStyle = '#555555';
+    ctx.fillText('X: ' + this.x, 100,100);
+}
 
-    this.arriba = function(){
-        this.y -= this.velocidad;
-    }
-    this.abajo = function(){
-        this.y += this.velocidad;
-    }
-    this.izquierda = function(){
-        this.x -= this.velocidad;
-    }
-    this.derecha = function(){
-        this.x += this.velocidad;
-    }
+Protagonista.prototype.arriba = function(){
+    this.y -= this.velocidad;
+}
 
+Protagonista.prototype.abajo = function(){
+    this.y += this.velocidad;
+}
+
+Protagonista.prototype.izquierda = function(){
+    this.x -= this.velocidad;
+}
+
+Protagonista.prototype.derecha = function(){
+    this.x += this.velocidad;
+    console.log("la concha de la lora");
 }
 
 // ===============================
@@ -94,7 +97,7 @@ let per1 = new personaje(10,100);
 let per2 = new personaje(10,200);
 let per3 = new personaje(10,350);
 
-let prota = new protagonista(200,200);
+let prota = new Protagonista(200,200);
 
 
 // ===============================
